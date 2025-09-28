@@ -1,0 +1,141 @@
+* {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.content > * {
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  align-content: space-between;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  background-color: peachpuff;
+  color: salmon;
+  padding: 1.5em;
+  border-bottom: 8px solid salmon;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4em; /* ระยะห่างระหว่างการ์ด/ปุ่ม */
+  padding-inline: 1em;
+  padding: 4em;
+}
+
+.button-add,
+.card-book {
+  flex: 1 1 20em; /* ยืด-หดได้ โดยมีฐานกว้าง ~20em */
+  max-width: 20em; /* ไม่กว้างเกินการ์ด */
+  height: 34em; /* สูงเท่ากัน (แทน max-height เดิม) */
+}
+
+.button-add {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border: 4px solid grey;
+  border-radius: 0.5em;
+  color: grey;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-book div {
+  margin: 0 auto;
+}
+
+.card-book {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border: 4px solid grey;
+  border-radius: 0.5em;
+  color: grey;
+  background-color: white;
+  overflow: hidden;
+}
+
+.card-book-image {
+  flex: 0 0 auto;
+  border: 1px solid grey;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 4;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+}
+
+.card-book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-book-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 0.25em;
+}
+
+.card-book-name {
+  text-align: center;
+}
+
+.card-book-authors {
+  text-align: center;
+}
+
+.link-button {
+  display: block;
+  margin-top: auto;
+  width: 100%;
+  background-color: lightblue;
+  padding: 0.75em;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .button-add,
+  .card-book {
+    max-width: 100%;
+  }
+}
+
+.footer {
+  bottom: 0;
+  text-align: center;
+  width: 100vw;
+  background-color: peachpuff;
+  color: salmon;
+  padding: 1em;
+  border-top: 4px solid salmon;
+}
