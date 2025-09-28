@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import data from "../data/books.json";
-import Modal from "./components/modal.jsx";
-import AddBook from "./components/addbook.jsx";
+import Modal from "./components/Modal.jsx";
+import AddBook from "./components/AddBook.jsx";
 
 const CARD_COUNT = 2;
 
